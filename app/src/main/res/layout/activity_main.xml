@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/santa_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="#AA000000">
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Secret Santa - Organiser"
+            android:textColor="#ffffff"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="Add each person with their phone number"
+            android:textColor="#cbd5f5"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/buttonAddPerson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#3b82f6"
+            android:text="Add person"
+            android:textColor="#ffffff" />
+
+        <!-- rows: [ Name ][ Phone ] will be added here -->
+        <LinearLayout
+            android:id="@+id/peopleContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical" />
+
+        <Button
+            android:id="@+id/buttonShuffle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#ef4444"
+            android:text="Generate Secret Santa and PINs"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/textError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textColor="#ff6b6b"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/textResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text=""
+            android:textColor="#e5e7eb"
+            android:textSize="15sp" />
+
+        <!-- Share section -->
+        <TextView
+            android:id="@+id/textShareTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Send PIN to someone:"
+            android:textColor="#cbd5f5"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <Spinner
+            android:id="@+id/spinnerShareName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/shareButtonsRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/buttonSendSms"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#f59e0b"
+                android:text="Send SMS"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/buttonSendWhatsApp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#22c55e"
+                android:text="Send WhatsApp"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="24dp"
+            android:background="#1f2933" />
+
+        <Button
+            android:id="@+id/buttonGoToReveal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#10b981"
+            android:text="I am a participant - Reveal my friend"
+            android:textColor="#ffffff" />
+
+    </LinearLayout>
+</ScrollView>
